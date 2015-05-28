@@ -8,7 +8,7 @@ using google predictive model API and output prediction with python script
 https://github.com/caesar0301/awesome-public-datasets
 <br>
 
-<center>Traning docs</center>
+<h3><center>Traning Docs</h3></center>
 <hr>
 <h4>-sample training on language prediction api</h4>
 https://cloud.google.com/prediction/docs/hello_world
