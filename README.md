@@ -27,9 +27,14 @@ https://github.com/GoogleCloudPlatform/prediction-try-java-python
 <br> figured out about OAuth2.0 to allow request access
 
 <hr>
-<h3> my python script < /h3>
-<li> client_secrets.json - auth access </li>
-<li> predict.py - makes a query request and return the results</li>
+<h3> my python script main.py</h3>
+<li> to add/modify the prediction, change the query.csv </li>
+<li> usage: while inside the folder and the google_appengine is at home directory,
+<br> ~/google_appengine/dev_appserver.py ./ </li>
+<li> open browser at http://localhost:8080/</li>
+<li> it would ask you to auth access for OAuth2</li>
+<li> click accpet and it would query and display results</li>
+
 
 
 
