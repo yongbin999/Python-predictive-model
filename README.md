@@ -1,12 +1,6 @@
 # Python-predictive-model
 using google predictive model API and output prediction with python script
 <hr>
-<br>My project id:  243659480938
-<br>model:
-
-<h4>public data</h4>
-https://github.com/caesar0301/awesome-public-datasets
-<br><br>
 
 <h3>Traning Docs</h3>
 <hr>
@@ -47,6 +41,6 @@ usage:
 <br> functional design:
 <li> routes setup at the bottom</li>
 <li> on default /, directs to MainPage </li>
-<li> if credential doesnt exist, opens up flow in OAuth and redirects to AuthHandler</li>
-<br> AuthHandler checks if credential exists, if so returns to main
+<li> if credential doesnt exist, opens up flow in OAuth and redirects to AuthHandler
+<br> AuthHandler checks if credential exists, if so returns to main</li>
 <li> if credential already done, then process those the query for each row in query.csv</li>

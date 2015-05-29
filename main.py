@@ -60,8 +60,14 @@ class MainPage(webapp.RequestHandler):
 			project=projid, id=modelid, body=items).execute()
 
 		querystring = json.dumps(items['input']['csvInstance'])
-		response_result = 'Result: ' + json.dumps(result['outputLabel'])
+		if 'outputValue' in result:
+			resultitem = json.dumps(result['outputValue']) 
+		else:	
+			resultitem = json.dumps(result['outputLabel'])
+		response_result = 'Result: ' + resultitem
 		# cant write in appengine outputdata(result, 'output')
+
+
 		print(querystring + " " +response_result +'\n')
 
 		self.response.headers['Content-Type'] = 'text/plain'

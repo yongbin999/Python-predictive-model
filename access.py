@@ -4,4 +4,12 @@ score = 'https://www.googleapis.com/auth/prediction'
 USER_AGENT = 'testlang'
 
 projid = '243659480938'
-modelid = 'testlang'
+modelid = 'schoolsize'
+
+
+#model selection 
+#'testlang' - check is its english, spanish, or french,  
+	# query string  ,"words...."
+
+#'schoolsize' - change what sat schools aver for number of students in that school 
+	# query string  ,#,#,#,,
