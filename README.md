@@ -41,5 +41,5 @@ usage:
 <li> routes setup at the bottom</li>
 <li> on default /, directs to MainPage </li>
 <li> if credential doesnt exist, opens up flow in OAuth and redirects to AuthHandler</li>
-<br> AuthHandler checks if credential exists, if so returns to main</li>
+<br> AuthHandler checks if credential exists, if so returns to main
 <li> if credential already done, then process those the query for each row in query.csv</li>
