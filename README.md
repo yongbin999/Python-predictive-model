@@ -38,7 +38,13 @@ usage:
 <li> click accpet and it would query and display results</li>
 <li> to add/modify the query prediction, change the query.csv </li>
 
-<br> functional design
+<br> file description:
+<li> run.py - script to start server and browser</li>
+<li> main.py - codes for server and query</li>
+<li> data_io.py - codes for processing csv query</li>
+<li> access.py - variable for accessing models in google prediction api</li>
+
+<br> functional design:
 <li> routes setup at the bottom</li>
 <li> on default /, directs to MainPage </li>
 <li> if credential doesnt exist, opens up flow in OAuth and redirects to AuthHandler</li>

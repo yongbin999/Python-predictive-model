@@ -13,10 +13,7 @@ from oauth2client.appengine import StorageByKeyName
 from oauth2client.appengine import CredentialsModel
 
 # my project access info
-client_id = '243659480938-dhm2hfpti0gmvbvsntue8ipgcq9gnb1h.apps.googleusercontent.com'
-client_secret = 'wdwckrdBZTK0ypOOjm7m_7JB'
-score = 'https://www.googleapis.com/auth/prediction'
-USER_AGENT = 'testlang'
+from access import *
 
 
 # main default handler
@@ -49,8 +46,6 @@ class MainPage(webapp.RequestHandler):
 	#"2nd around after getting auth, now do the query"
 	print("2nd around after getting auth, now do the query\n")
 
-	projid = '243659480938'
-	modelid = 'testlang'
 
 	# read query.csv returns list of query bodys
 	bodyitems = readquery('query.csv')
