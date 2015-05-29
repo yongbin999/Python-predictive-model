@@ -18,10 +18,13 @@ class MainPage(webapp2.RequestHandler):
 			client_secret=client_secret,
                         scope=scope,
 			access_type = 'offline',
+			approval_prompt='force',
 			redirect_uri=self.request.relative_url('/auth_return')
-
+		)
 	authorize_url = flow.step1_get_authorize_url()
-	self.redirect(authorize_url);
+
+	print("lallaaalalala  " + authorize_url)
+	self.redirect(authorize_url)
 
 
 app = webapp2.WSGIApplication([
