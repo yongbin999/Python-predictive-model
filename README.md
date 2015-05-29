@@ -1,6 +1,9 @@
 # Python-predictive-model
 using google predictive model API and output prediction with python script
+<br>http://sunlit-pipe-95822.appspot.com/
+<br>deployed with google appcfg to  appspot 
 <hr>
+<br> todos future - front end view, sample data view, load file system for new queries
 
 <h3>Traning Docs</h3>
 <hr>
