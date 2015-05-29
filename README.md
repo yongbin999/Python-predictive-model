@@ -37,6 +37,7 @@ usage:
 <li> main.py - codes for server and query</li>
 <li> data_io.py - codes for processing csv query</li>
 <li> access.py - variable for accessing models in google prediction api</li>
+<li> dataset sat scores- https://catalog.data.gov/dataset/sat-results-e88d7
 
 <br> functional design:
 <li> routes setup at the bottom</li>
