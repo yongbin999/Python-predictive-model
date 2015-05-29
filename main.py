@@ -3,6 +3,7 @@ import httplib2
 import json
 import pickle
 import pprint
+from data_io import *
 from google.appengine.ext import webapp
 from google.appengine.api import memcache
 from apiclient.discovery import build
@@ -50,19 +51,26 @@ class MainPage(webapp.RequestHandler):
 
 	projid = '243659480938'
 	modelid = 'testlang'
-	bodyitems = {'input': {'csvInstance': ['hello']}}
-	
+
+	# read query.csv returns list of query bodys
+	bodyitems = readquery('query.csv')
+	print("query lines: " +json.dumps(bodyitems) +'\n')
+
 	http = credentials.authorize(httplib2.Http())
 	service = build('prediction', 'v1.6', http=http)	
 
-	result = service.trainedmodels().predict(
-			project=projid, id=modelid, body=bodyitems).execute()
-	print(json.dumps(result))
-	response_result = 'Result: ' + json.dumps(result['outputLabel'])
-	print(response_result)
-	
-	self.response.headers['Content-Type'] = 'text/plain'
-     	self.response.out.write(response_result +'\n')
+
+	for items in bodyitems:
+		result = service.trainedmodels().predict(
+			project=projid, id=modelid, body=items).execute()
+
+		querystring = json.dumps(items['input']['csvInstance'])
+		response_result = 'Result: ' + json.dumps(result['outputLabel'])
+		# cant write in appengine outputdata(result, 'output')
+		print(querystring + " " +response_result +'\n')
+
+		self.response.headers['Content-Type'] = 'text/plain'
+     		self.response.out.write(querystring + " " +response_result +'\n')
 
        except Exception, err:
 	err_str = str(err)

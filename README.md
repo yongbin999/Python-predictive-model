@@ -35,7 +35,7 @@ usage:
 <li> open browser at http://localhost:8080/</li>
 <li> it would ask to auth access for OAuth2 for the first time</li>
 <li> click accpet and it would query and display results</li>
-<li> to add/modify the prediction, change the query.csv </li>
+<li> to add/modify the query prediction, change the query.csv </li>
 
 <br> functional design
 <li> routes setup at the bottom</li>
