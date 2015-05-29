@@ -2,10 +2,9 @@
 using google predictive model API and output prediction with python script
 <br>http://sunlit-pipe-95822.appspot.com/
 <br>deployed with google appcfg to  appspot 
-<hr>
 <br> todos future - front end view, sample data view, load file system for new queries
 
-<h3>Traning Docs</h3>
+<h4>Traning Docs</h4>
 <hr>
 <h4>-sample training on language prediction api</h4>
 https://cloud.google.com/prediction/docs/hello_world
@@ -24,8 +23,9 @@ https://github.com/GoogleCloudPlatform/prediction-try-java-python
 <br> figured out flow in OAuth2.0 to allow request access
 <br> once have access stored in backend, then you can make requests
 
-<hr>
+
 <h3> my python script: main.py</h3>
+<hr>
 usage:
 <li> script: use the ./run.py to skip the manual step</li>
 <li> manual: while inside the folder and hav google_appengine at home directory, in terminal run
