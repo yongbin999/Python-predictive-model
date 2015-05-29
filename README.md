@@ -21,20 +21,25 @@ projectnumber:414649711441
 <br>model:sample.languageid
 <br>https://developers.google.com/apis-explorer/?hl=en_US#p/prediction/v1.6/prediction.hostedmodels.predict
 
-<h4>-clone and modified to work with my clientid/secret </h4>
+<h4>-clone and modified to work with clientid/secret </h4>
 https://github.com/GoogleCloudPlatform/prediction-try-java-python
 
-<br> figured out about OAuth2.0 to allow request access
+<br> figured out flow in OAuth2.0 to allow request access
+<br> once have access stored in backend, then you can make requests
 
 <hr>
-<h3> my python script main.py</h3>
-<li> to add/modify the prediction, change the query.csv </li>
-<li> usage: while inside the folder and the google_appengine is at home directory,
+<h3> my python script: main.py</h3>
+usage:
+<li> while inside the folder and have google_appengine at home directory,
 <br> ~/google_appengine/dev_appserver.py ./ </li>
 <li> open browser at http://localhost:8080/</li>
-<li> it would ask you to auth access for OAuth2</li>
+<li> it would ask to auth access for OAuth2 for the first time</li>
 <li> click accpet and it would query and display results</li>
+<li> to add/modify the prediction, change the query.csv </li>
 
-
-
-
+<br> functional design
+<li> routes setup at the bottom</li>
+<li> on default /, directs to MainPage </li>
+<li> if credential doesnt exist, opens up flow in OAuth and redirects to AuthHandler</li>
+<br> AuthHandler checks if credential exists, if so returns to main</li>
+<li> if credential already done, then process those the query for each row in query.csv</li>
