@@ -25,6 +25,7 @@ def readcsv(filename):
 	    result.append(row[1:])
 	return result
 
+# doesnt allow output in google app engine
 def outputdata(data, filename):
 	with open('./'+filename+'.csv', 'wb') as f:
     		writer = csv.writer(f)
