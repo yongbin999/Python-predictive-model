@@ -9,11 +9,11 @@ class Server(multiprocessing.Process):
         os.system("~/google_appengine/dev_appserver.py ./")
         raise
 
-httpd = Server()
-httpd.start()
+server = Server()
+server.start()
 time.sleep(1)
 webbrowser.open_new("http://localhost:8080/")
 time.sleep(1)
-httpd.terminate()
-httpd.join()
+server.terminate()
+server.join()
 print "End"

@@ -30,9 +30,10 @@ https://github.com/GoogleCloudPlatform/prediction-try-java-python
 <hr>
 <h3> my python script: main.py</h3>
 usage:
-<li> while inside the folder and have google_appengine at home directory,
+<li> script: use the ./run.py to automate below</li>
+<li> manual: while inside the folder and have google_appengine at home directory, in terminal run
 <br> ~/google_appengine/dev_appserver.py ./ </li>
-<li> open browser at http://localhost:8080/</li>
+<br> open browser at http://localhost:8080
 <li> it would ask to auth access for OAuth2 for the first time</li>
 <li> click accpet and it would query and display results</li>
 <li> to add/modify the query prediction, change the query.csv </li>
