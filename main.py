@@ -1,8 +1,9 @@
 #!/usr/bin/env python
+import httplib2
 from google.appengine.ext import webapp
-from predict import *
 import json
 import pickle
+
 from google.appengine.api import memcache
 from apiclient.discovery import build
 from oauth2client.client import AccessTokenRefreshError
@@ -54,7 +55,7 @@ class MainPage(webapp.RequestHandler):
 	print(service)
 	
 	self.response.headers['Content-Type'] = 'text/plain'
-     	self.response.out.write('Result: ' + json.dumps(result))
+     	self.response.out.write('Result: ' + json.dumps(result['outputLabel']))
      except Exception, err:
 	err_str = str(err)
 	self.response.out.write(err_str)
@@ -71,7 +72,7 @@ class AuthHandler(webapp.RequestHandler):
     else:
       raise('unable to obtain OAuth 2.0 credentials')
 
-app = webapp2.WSGIApplication([
+app = webapp.WSGIApplication([
     ('/', MainPage),
     ('/auth_return', AuthHandler),
 ], debug=True)
